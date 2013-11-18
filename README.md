@@ -1,4 +1,4 @@
-# Python Android Market Library
+# Python Android PlayStore Library
 
 This is a Python port of the [Android Market API Java Project](http://code.google.com/p/android-market-api/)
 
@@ -11,10 +11,10 @@ This is a Python port of the [Android Market API Java Project](http://code.googl
 
 Begin by starting a new session and entering your google credentials.
 
-    session = MarketSession()
+    session = PlayStoreSession()
     session.login("user@gmail.com", "password")
     
-Search for "bankdroid" on the market and print the first result
+Search for "bankdroid" on the play store and print the first result
 
     results = session.searchApp("bankdroid")
     app = results[0]
@@ -70,7 +70,7 @@ Download and save the first screenshot to disk:
 
 Download and save the app icon to disk:
 
-    data = session.getImage(app["id"], imagetype=market_proto.GetImageRequest.ICON)
+    data = session.getImage(app["id"], imagetype=playstore_proto.GetImageRequest.ICON)
     f = open("icon.png", "wb")
     f.write(data)
     f.close()

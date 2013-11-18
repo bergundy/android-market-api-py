@@ -6,10 +6,12 @@ from google.protobuf import reflection
 from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
+
+
 DESCRIPTOR = descriptor.FileDescriptor(
-  name='market.proto',
+  name='playstore.proto',
   package='',
-  serialized_pb='\n\x0cmarket.proto\"\xe4\x02\n\x0b\x41ppsRequest\x12\x19\n\x07\x61ppType\x18\x01 \x01(\x0e\x32\x08.AppType\x12\r\n\x05query\x18\x02 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\r\n\x05\x61ppId\x18\x04 \x01(\t\x12\x18\n\x10withExtendedInfo\x18\x06 \x01(\x08\x12/\n\torderType\x18\x07 \x01(\x0e\x32\x16.AppsRequest.OrderType:\x04NONE\x12\x12\n\nstartIndex\x18\x08 \x01(\x04\x12\x14\n\x0c\x65ntriesCount\x18\t \x01(\x05\x12,\n\x08viewType\x18\n \x01(\x0e\x32\x15.AppsRequest.ViewType:\x03\x41LL\"<\n\tOrderType\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07POPULAR\x10\x01\x12\n\n\x06NEWEST\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\"\'\n\x08ViewType\x12\x07\n\x03\x41LL\x10\x00\x12\x08\n\x04\x46REE\x10\x01\x12\x08\n\x04PAID\x10\x02\"7\n\x0c\x41ppsResponse\x12\x11\n\x03\x61pp\x18\x01 \x03(\x0b\x32\x04.App\x12\x14\n\x0c\x65ntriesCount\x18\x02 \x01(\x05\"r\n\x08\x43\x61tegory\x12\x0f\n\x07\x61ppType\x18\x02 \x01(\x05\x12\r\n\x05title\x18\x04 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x05 \x01(\t\x12 \n\rsubCategories\x18\x08 \x03(\x0b\x32\t.Category\"J\n\x0f\x43ommentsRequest\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x12\n\nstartIndex\x18\x02 \x01(\x05\x12\x14\n\x0c\x65ntriesCount\x18\x03 \x01(\x05\"D\n\x10\x43ommentsResponse\x12\x1a\n\x08\x63omments\x18\x01 \x03(\x0b\x32\x08.Comment\x12\x14\n\x0c\x65ntriesCount\x18\x02 \x01(\x05\"\xf8\x04\n\x03\x41pp\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x1f\n\x07\x61ppType\x18\x03 \x01(\x0e\x32\x08.AppType:\x04NONE\x12\x0f\n\x07\x63reator\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\r\n\x05price\x18\x06 \x01(\t\x12\x0e\n\x06rating\x18\x07 \x01(\t\x12\x14\n\x0cratingsCount\x18\x08 \x01(\x05\x12\'\n\x0c\x65xtendedinfo\x18\x0c \x01(\n2\x11.App.ExtendedInfo\x12\x11\n\tcreatorId\x18\x16 \x01(\t\x12\x13\n\x0bpackageName\x18\x18 \x01(\t\x12\x13\n\x0bversionCode\x18\x19 \x01(\x05\x12\x15\n\rpriceCurrency\x18  \x01(\t\x12\x13\n\x0bpriceMicros\x18! \x01(\x05\x1a\xcb\x02\n\x0c\x45xtendedInfo\x12\x13\n\x0b\x64\x65scription\x18\r \x01(\t\x12\x16\n\x0e\x64ownloadsCount\x18\x0e \x01(\x05\x12\x14\n\x0cpermissionId\x18\x0f \x03(\t\x12\x13\n\x0binstallSize\x18\x10 \x01(\x05\x12\x13\n\x0bpackageName\x18\x11 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x12 \x01(\t\x12\x14\n\x0c\x63ontactEmail\x18\x14 \x01(\t\x12\x1a\n\x12\x64ownloadsCountText\x18\x17 \x01(\t\x12\x14\n\x0c\x63ontactPhone\x18\x1a \x01(\t\x12\x16\n\x0e\x63ontactWebsite\x18\x1b \x01(\t\x12\x18\n\x10screenshotsCount\x18\x1e \x01(\x05\x12\x11\n\tpromoText\x18\x1f \x01(\t\x12\x15\n\rrecentChanges\x18& \x01(\t\x12\x18\n\x10promotionalVideo\x18+ \x01(\t\"c\n\x07\x43omment\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06rating\x18\x02 \x01(\x05\x12\x12\n\nauthorName\x18\x03 \x01(\t\x12\x14\n\x0c\x63reationTime\x18\x04 \x01(\x04\x12\x10\n\x08\x61uthorId\x18\x05 \x01(\t\"\x13\n\x11\x43\x61tegoriesRequest\"3\n\x12\x43\x61tegoriesResponse\x12\x1d\n\ncategories\x18\x01 \x03(\x0b\x32\t.Category\"1\n\x14SubCategoriesRequest\x12\x19\n\x07\x61ppType\x18\x01 \x01(\x0e\x32\x08.AppType\"g\n\x15SubCategoriesResponse\x12\x1b\n\x08\x63\x61tegory\x18\x01 \x03(\x0b\x32\t.Category\x12\x1a\n\x12subCategoryDisplay\x18\x02 \x01(\t\x12\x15\n\rsubCategoryId\x18\x03 \x01(\x05\"\x8a\x02\n\x0eRequestContext\x12\x14\n\x0c\x61uthSubToken\x18\x01 \x02(\t\x12\x10\n\x08isSecure\x18\x02 \x02(\x08\x12\x0f\n\x07version\x18\x03 \x02(\x05\x12\x11\n\tandroidId\x18\x04 \x02(\t\x12\x1b\n\x13\x64\x65viceAndSdkVersion\x18\x05 \x01(\t\x12\x14\n\x0cuserLanguage\x18\x06 \x01(\t\x12\x13\n\x0buserCountry\x18\x07 \x01(\t\x12\x15\n\roperatorAlpha\x18\x08 \x01(\t\x12\x18\n\x10simOperatorAlpha\x18\t \x01(\t\x12\x17\n\x0foperatorNumeric\x18\n \x01(\t\x12\x1a\n\x12simOperatorNumeric\x18\x0b \x01(\t\"\xcc\x01\n\x0fGetImageRequest\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x32\n\nimageUsage\x18\x03 \x01(\x0e\x32\x1e.GetImageRequest.AppImageUsage\x12\x0f\n\x07imageId\x18\x04 \x01(\t\"e\n\rAppImageUsage\x12\x08\n\x04ICON\x10\x00\x12\x0e\n\nSCREENSHOT\x10\x01\x12\x18\n\x14SCREENSHOT_THUMBNAIL\x10\x02\x12\x0f\n\x0bPROMO_BADGE\x10\x03\x12\x0f\n\x0b\x42ILING_ICON\x10\x04\"=\n\x0fGetAssetRequest\x12\x0f\n\x07\x61ssetId\x18\x01 \x02(\t\x12\x19\n\x11\x64irectDownloadKey\x18\x02 \x01(\t\"%\n\x10GetImageResponse\x12\x11\n\timageData\x18\x01 \x01(\x0c\"\xf7\x02\n\x10GetAssetResponse\x12\x34\n\x0cinstallasset\x18\x01 \x03(\n2\x1e.GetAssetResponse.InstallAsset\x1a\xac\x02\n\x0cInstallAsset\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x11\n\tassetName\x18\x03 \x01(\t\x12\x11\n\tassetType\x18\x04 \x01(\t\x12\x14\n\x0c\x61ssetPackage\x18\x05 \x01(\t\x12\x0f\n\x07\x62lobUrl\x18\x06 \x01(\t\x12\x16\n\x0e\x61ssetSignature\x18\x07 \x01(\t\x12\x11\n\tassetSize\x18\x08 \x01(\x04\x12\x15\n\rrefundTimeout\x18\t \x01(\x04\x12\x15\n\rforwardLocked\x18\n \x01(\x08\x12\x0f\n\x07secured\x18\x0b \x01(\x08\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x1e\n\x16\x64ownloadAuthCookieName\x18\r \x01(\t\x12\x1f\n\x17\x64ownloadAuthCookieValue\x18\x0e \x01(\t\"\xee\x02\n\x07Request\x12 \n\x07\x63ontext\x18\x01 \x01(\x0b\x32\x0f.RequestContext\x12+\n\x0crequestgroup\x18\x02 \x03(\n2\x15.Request.RequestGroup\x1a\x93\x02\n\x0cRequestGroup\x12!\n\x0b\x61ppsRequest\x18\x04 \x01(\x0b\x32\x0c.AppsRequest\x12)\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x10.CommentsRequest\x12)\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x10.GetAssetRequest\x12&\n\x0cimageRequest\x18\x0b \x01(\x0b\x32\x10.GetImageRequest\x12\x33\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x15.SubCategoriesRequest\x12-\n\x11\x63\x61tegoriesRequest\x18\x15 \x01(\x0b\x32\x12.CategoriesRequest\"\xde\x01\n\x0fResponseContext\x12+\n\x06result\x18\x01 \x01(\x0e\x32\x1b.ResponseContext.ResultType\x12\x0e\n\x06maxAge\x18\x02 \x01(\x05\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x15\n\rserverVersion\x18\x04 \x01(\x05\"i\n\nResultType\x12\x06\n\x02OK\x10\x00\x12\x0f\n\x0b\x42\x41\x44_REQUEST\x10\x01\x12\x1a\n\x16INTERNAL_SERVICE_ERROR\x10\x02\x12\x10\n\x0cNOT_MODIFIED\x10\x03\x12\x14\n\x10USER_INPUT_ERROR\x10\x04\"\x80\x03\n\x08Response\x12.\n\rresponsegroup\x18\x01 \x03(\n2\x17.Response.ResponseGroup\x1a\xc3\x02\n\rResponseGroup\x12!\n\x07\x63ontext\x18\x02 \x01(\x0b\x32\x10.ResponseContext\x12#\n\x0c\x61ppsResponse\x18\x03 \x01(\x0b\x32\r.AppsResponse\x12+\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x11.CommentsResponse\x12+\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x11.GetAssetResponse\x12(\n\rimageResponse\x18\n \x01(\x0b\x32\x11.GetImageResponse\x12/\n\x12\x63\x61tegoriesResponse\x18\x14 \x01(\x0b\x32\x13.CategoriesResponse\x12\x35\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x16.SubCategoriesResponse*K\n\x07\x41ppType\x12\x08\n\x04NONE\x10\x00\x12\x0f\n\x0b\x41PPLICATION\x10\x01\x12\x0c\n\x08RINGTONE\x10\x02\x12\r\n\tWALLPAPER\x10\x03\x12\x08\n\x04GAME\x10\x04\x42!\n\x1f\x63om.gc.android.market.api.model')
+  serialized_pb='\n\x0fplaystore.proto\"\xe4\x02\n\x0b\x41ppsRequest\x12\x19\n\x07\x61ppType\x18\x01 \x01(\x0e\x32\x08.AppType\x12\r\n\x05query\x18\x02 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\r\n\x05\x61ppId\x18\x04 \x01(\t\x12\x18\n\x10withExtendedInfo\x18\x06 \x01(\x08\x12/\n\torderType\x18\x07 \x01(\x0e\x32\x16.AppsRequest.OrderType:\x04NONE\x12\x12\n\nstartIndex\x18\x08 \x01(\x04\x12\x14\n\x0c\x65ntriesCount\x18\t \x01(\x05\x12,\n\x08viewType\x18\n \x01(\x0e\x32\x15.AppsRequest.ViewType:\x03\x41LL\"<\n\tOrderType\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07POPULAR\x10\x01\x12\n\n\x06NEWEST\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\"\'\n\x08ViewType\x12\x07\n\x03\x41LL\x10\x00\x12\x08\n\x04\x46REE\x10\x01\x12\x08\n\x04PAID\x10\x02\"7\n\x0c\x41ppsResponse\x12\x11\n\x03\x61pp\x18\x01 \x03(\x0b\x32\x04.App\x12\x14\n\x0c\x65ntriesCount\x18\x02 \x01(\x05\"r\n\x08\x43\x61tegory\x12\x0f\n\x07\x61ppType\x18\x02 \x01(\x05\x12\r\n\x05title\x18\x04 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x05 \x01(\t\x12 \n\rsubCategories\x18\x08 \x03(\x0b\x32\t.Category\"J\n\x0f\x43ommentsRequest\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x12\n\nstartIndex\x18\x02 \x01(\x05\x12\x14\n\x0c\x65ntriesCount\x18\x03 \x01(\x05\"D\n\x10\x43ommentsResponse\x12\x1a\n\x08\x63omments\x18\x01 \x03(\x0b\x32\x08.Comment\x12\x14\n\x0c\x65ntriesCount\x18\x02 \x01(\x05\"\xf8\x04\n\x03\x41pp\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x1f\n\x07\x61ppType\x18\x03 \x01(\x0e\x32\x08.AppType:\x04NONE\x12\x0f\n\x07\x63reator\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\r\n\x05price\x18\x06 \x01(\t\x12\x0e\n\x06rating\x18\x07 \x01(\t\x12\x14\n\x0cratingsCount\x18\x08 \x01(\x05\x12\'\n\x0c\x65xtendedinfo\x18\x0c \x01(\n2\x11.App.ExtendedInfo\x12\x11\n\tcreatorId\x18\x16 \x01(\t\x12\x13\n\x0bpackageName\x18\x18 \x01(\t\x12\x13\n\x0bversionCode\x18\x19 \x01(\x05\x12\x15\n\rpriceCurrency\x18  \x01(\t\x12\x13\n\x0bpriceMicros\x18! \x01(\x05\x1a\xcb\x02\n\x0c\x45xtendedInfo\x12\x13\n\x0b\x64\x65scription\x18\r \x01(\t\x12\x16\n\x0e\x64ownloadsCount\x18\x0e \x01(\x05\x12\x14\n\x0cpermissionId\x18\x0f \x03(\t\x12\x13\n\x0binstallSize\x18\x10 \x01(\x05\x12\x13\n\x0bpackageName\x18\x11 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x12 \x01(\t\x12\x14\n\x0c\x63ontactEmail\x18\x14 \x01(\t\x12\x1a\n\x12\x64ownloadsCountText\x18\x17 \x01(\t\x12\x14\n\x0c\x63ontactPhone\x18\x1a \x01(\t\x12\x16\n\x0e\x63ontactWebsite\x18\x1b \x01(\t\x12\x18\n\x10screenshotsCount\x18\x1e \x01(\x05\x12\x11\n\tpromoText\x18\x1f \x01(\t\x12\x15\n\rrecentChanges\x18& \x01(\t\x12\x18\n\x10promotionalVideo\x18+ \x01(\t\"c\n\x07\x43omment\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06rating\x18\x02 \x01(\x05\x12\x12\n\nauthorName\x18\x03 \x01(\t\x12\x14\n\x0c\x63reationTime\x18\x04 \x01(\x04\x12\x10\n\x08\x61uthorId\x18\x05 \x01(\t\"\x13\n\x11\x43\x61tegoriesRequest\"3\n\x12\x43\x61tegoriesResponse\x12\x1d\n\ncategories\x18\x01 \x03(\x0b\x32\t.Category\"1\n\x14SubCategoriesRequest\x12\x19\n\x07\x61ppType\x18\x01 \x01(\x0e\x32\x08.AppType\"g\n\x15SubCategoriesResponse\x12\x1b\n\x08\x63\x61tegory\x18\x01 \x03(\x0b\x32\t.Category\x12\x1a\n\x12subCategoryDisplay\x18\x02 \x01(\t\x12\x15\n\rsubCategoryId\x18\x03 \x01(\x05\"\x8a\x02\n\x0eRequestContext\x12\x14\n\x0c\x61uthSubToken\x18\x01 \x02(\t\x12\x10\n\x08isSecure\x18\x02 \x02(\x08\x12\x0f\n\x07version\x18\x03 \x02(\x05\x12\x11\n\tandroidId\x18\x04 \x02(\t\x12\x1b\n\x13\x64\x65viceAndSdkVersion\x18\x05 \x01(\t\x12\x14\n\x0cuserLanguage\x18\x06 \x01(\t\x12\x13\n\x0buserCountry\x18\x07 \x01(\t\x12\x15\n\roperatorAlpha\x18\x08 \x01(\t\x12\x18\n\x10simOperatorAlpha\x18\t \x01(\t\x12\x17\n\x0foperatorNumeric\x18\n \x01(\t\x12\x1a\n\x12simOperatorNumeric\x18\x0b \x01(\t\"\xcc\x01\n\x0fGetImageRequest\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x32\n\nimageUsage\x18\x03 \x01(\x0e\x32\x1e.GetImageRequest.AppImageUsage\x12\x0f\n\x07imageId\x18\x04 \x01(\t\"e\n\rAppImageUsage\x12\x08\n\x04ICON\x10\x00\x12\x0e\n\nSCREENSHOT\x10\x01\x12\x18\n\x14SCREENSHOT_THUMBNAIL\x10\x02\x12\x0f\n\x0bPROMO_BADGE\x10\x03\x12\x0f\n\x0b\x42ILING_ICON\x10\x04\"=\n\x0fGetAssetRequest\x12\x0f\n\x07\x61ssetId\x18\x01 \x02(\t\x12\x19\n\x11\x64irectDownloadKey\x18\x02 \x01(\t\"%\n\x10GetImageResponse\x12\x11\n\timageData\x18\x01 \x01(\x0c\"\xf7\x02\n\x10GetAssetResponse\x12\x34\n\x0cinstallasset\x18\x01 \x03(\n2\x1e.GetAssetResponse.InstallAsset\x1a\xac\x02\n\x0cInstallAsset\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x11\n\tassetName\x18\x03 \x01(\t\x12\x11\n\tassetType\x18\x04 \x01(\t\x12\x14\n\x0c\x61ssetPackage\x18\x05 \x01(\t\x12\x0f\n\x07\x62lobUrl\x18\x06 \x01(\t\x12\x16\n\x0e\x61ssetSignature\x18\x07 \x01(\t\x12\x11\n\tassetSize\x18\x08 \x01(\x04\x12\x15\n\rrefundTimeout\x18\t \x01(\x04\x12\x15\n\rforwardLocked\x18\n \x01(\x08\x12\x0f\n\x07secured\x18\x0b \x01(\x08\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x1e\n\x16\x64ownloadAuthCookieName\x18\r \x01(\t\x12\x1f\n\x17\x64ownloadAuthCookieValue\x18\x0e \x01(\t\"\xee\x02\n\x07Request\x12 \n\x07\x63ontext\x18\x01 \x01(\x0b\x32\x0f.RequestContext\x12+\n\x0crequestgroup\x18\x02 \x03(\n2\x15.Request.RequestGroup\x1a\x93\x02\n\x0cRequestGroup\x12!\n\x0b\x61ppsRequest\x18\x04 \x01(\x0b\x32\x0c.AppsRequest\x12)\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x10.CommentsRequest\x12)\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x10.GetAssetRequest\x12&\n\x0cimageRequest\x18\x0b \x01(\x0b\x32\x10.GetImageRequest\x12\x33\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x15.SubCategoriesRequest\x12-\n\x11\x63\x61tegoriesRequest\x18\x15 \x01(\x0b\x32\x12.CategoriesRequest\"\xde\x01\n\x0fResponseContext\x12+\n\x06result\x18\x01 \x01(\x0e\x32\x1b.ResponseContext.ResultType\x12\x0e\n\x06maxAge\x18\x02 \x01(\x05\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x15\n\rserverVersion\x18\x04 \x01(\x05\"i\n\nResultType\x12\x06\n\x02OK\x10\x00\x12\x0f\n\x0b\x42\x41\x44_REQUEST\x10\x01\x12\x1a\n\x16INTERNAL_SERVICE_ERROR\x10\x02\x12\x10\n\x0cNOT_MODIFIED\x10\x03\x12\x14\n\x10USER_INPUT_ERROR\x10\x04\"\x80\x03\n\x08Response\x12.\n\rresponsegroup\x18\x01 \x03(\n2\x17.Response.ResponseGroup\x1a\xc3\x02\n\rResponseGroup\x12!\n\x07\x63ontext\x18\x02 \x01(\x0b\x32\x10.ResponseContext\x12#\n\x0c\x61ppsResponse\x18\x03 \x01(\x0b\x32\r.AppsResponse\x12+\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x11.CommentsResponse\x12+\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x11.GetAssetResponse\x12(\n\rimageResponse\x18\n \x01(\x0b\x32\x11.GetImageResponse\x12/\n\x12\x63\x61tegoriesResponse\x18\x14 \x01(\x0b\x32\x13.CategoriesResponse\x12\x35\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x16.SubCategoriesResponse*K\n\x07\x41ppType\x12\x08\n\x04NONE\x10\x00\x12\x0f\n\x0b\x41PPLICATION\x10\x01\x12\x0c\n\x08RINGTONE\x10\x02\x12\r\n\tWALLPAPER\x10\x03\x12\x08\n\x04GAME\x10\x04\x42!\n\x1f\x63om.gc.android.market.api.model')
 
 _APPTYPE = descriptor.EnumDescriptor(
   name='AppType',
@@ -40,8 +42,8 @@ _APPTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3597,
-  serialized_end=3672,
+  serialized_start=3600,
+  serialized_end=3675,
 )
 
 
@@ -50,6 +52,7 @@ APPLICATION = 1
 RINGTONE = 2
 WALLPAPER = 3
 GAME = 4
+
 
 _APPSREQUEST_ORDERTYPE = descriptor.EnumDescriptor(
   name='OrderType',
@@ -76,8 +79,8 @@ _APPSREQUEST_ORDERTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=272,
-  serialized_end=332,
+  serialized_start=275,
+  serialized_end=335,
 )
 
 _APPSREQUEST_VIEWTYPE = descriptor.EnumDescriptor(
@@ -101,8 +104,8 @@ _APPSREQUEST_VIEWTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=334,
-  serialized_end=373,
+  serialized_start=337,
+  serialized_end=376,
 )
 
 _GETIMAGEREQUEST_APPIMAGEUSAGE = descriptor.EnumDescriptor(
@@ -134,8 +137,8 @@ _GETIMAGEREQUEST_APPIMAGEUSAGE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2033,
-  serialized_end=2134,
+  serialized_start=2036,
+  serialized_end=2137,
 )
 
 _RESPONSECONTEXT_RESULTTYPE = descriptor.EnumDescriptor(
@@ -167,9 +170,10 @@ _RESPONSECONTEXT_RESULTTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3103,
-  serialized_end=3208,
+  serialized_start=3106,
+  serialized_end=3211,
 )
+
 
 _APPSREQUEST = descriptor.Descriptor(
   name='AppsRequest',
@@ -252,9 +256,10 @@ _APPSREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=17,
-  serialized_end=373,
+  serialized_start=20,
+  serialized_end=376,
 )
+
 
 _APPSRESPONSE = descriptor.Descriptor(
   name='AppsResponse',
@@ -286,9 +291,10 @@ _APPSRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=375,
-  serialized_end=430,
+  serialized_start=378,
+  serialized_end=433,
 )
+
 
 _CATEGORY = descriptor.Descriptor(
   name='Category',
@@ -341,9 +347,10 @@ _CATEGORY = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=432,
-  serialized_end=546,
+  serialized_start=435,
+  serialized_end=549,
 )
+
 
 _COMMENTSREQUEST = descriptor.Descriptor(
   name='CommentsRequest',
@@ -382,9 +389,10 @@ _COMMENTSREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=548,
-  serialized_end=622,
+  serialized_start=551,
+  serialized_end=625,
 )
+
 
 _COMMENTSRESPONSE = descriptor.Descriptor(
   name='CommentsResponse',
@@ -416,9 +424,10 @@ _COMMENTSRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=624,
-  serialized_end=692,
+  serialized_start=627,
+  serialized_end=695,
 )
+
 
 _APP_EXTENDEDINFO = descriptor.Descriptor(
   name='ExtendedInfo',
@@ -534,8 +543,8 @@ _APP_EXTENDEDINFO = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=996,
-  serialized_end=1327,
+  serialized_start=999,
+  serialized_end=1330,
 )
 
 _APP = descriptor.Descriptor(
@@ -652,9 +661,10 @@ _APP = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=695,
-  serialized_end=1327,
+  serialized_start=698,
+  serialized_end=1330,
 )
+
 
 _COMMENT = descriptor.Descriptor(
   name='Comment',
@@ -707,9 +717,10 @@ _COMMENT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1329,
-  serialized_end=1428,
+  serialized_start=1332,
+  serialized_end=1431,
 )
+
 
 _CATEGORIESREQUEST = descriptor.Descriptor(
   name='CategoriesRequest',
@@ -727,9 +738,10 @@ _CATEGORIESREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1430,
-  serialized_end=1449,
+  serialized_start=1433,
+  serialized_end=1452,
 )
+
 
 _CATEGORIESRESPONSE = descriptor.Descriptor(
   name='CategoriesResponse',
@@ -754,9 +766,10 @@ _CATEGORIESRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1451,
-  serialized_end=1502,
+  serialized_start=1454,
+  serialized_end=1505,
 )
+
 
 _SUBCATEGORIESREQUEST = descriptor.Descriptor(
   name='SubCategoriesRequest',
@@ -781,9 +794,10 @@ _SUBCATEGORIESREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1504,
-  serialized_end=1553,
+  serialized_start=1507,
+  serialized_end=1556,
 )
+
 
 _SUBCATEGORIESRESPONSE = descriptor.Descriptor(
   name='SubCategoriesResponse',
@@ -822,9 +836,10 @@ _SUBCATEGORIESRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1555,
-  serialized_end=1658,
+  serialized_start=1558,
+  serialized_end=1661,
 )
+
 
 _REQUESTCONTEXT = descriptor.Descriptor(
   name='RequestContext',
@@ -919,9 +934,10 @@ _REQUESTCONTEXT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1661,
-  serialized_end=1927,
+  serialized_start=1664,
+  serialized_end=1930,
 )
+
 
 _GETIMAGEREQUEST = descriptor.Descriptor(
   name='GetImageRequest',
@@ -961,9 +977,10 @@ _GETIMAGEREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1930,
-  serialized_end=2134,
+  serialized_start=1933,
+  serialized_end=2137,
 )
+
 
 _GETASSETREQUEST = descriptor.Descriptor(
   name='GetAssetRequest',
@@ -995,9 +1012,10 @@ _GETASSETREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2136,
-  serialized_end=2197,
+  serialized_start=2139,
+  serialized_end=2200,
 )
+
 
 _GETIMAGERESPONSE = descriptor.Descriptor(
   name='GetImageResponse',
@@ -1022,9 +1040,10 @@ _GETIMAGERESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2199,
-  serialized_end=2236,
+  serialized_start=2202,
+  serialized_end=2239,
 )
+
 
 _GETASSETRESPONSE_INSTALLASSET = descriptor.Descriptor(
   name='InstallAsset',
@@ -1133,8 +1152,8 @@ _GETASSETRESPONSE_INSTALLASSET = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2314,
-  serialized_end=2614,
+  serialized_start=2317,
+  serialized_end=2617,
 )
 
 _GETASSETRESPONSE = descriptor.Descriptor(
@@ -1160,9 +1179,10 @@ _GETASSETRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2239,
-  serialized_end=2614,
+  serialized_start=2242,
+  serialized_end=2617,
 )
+
 
 _REQUEST_REQUESTGROUP = descriptor.Descriptor(
   name='RequestGroup',
@@ -1222,8 +1242,8 @@ _REQUEST_REQUESTGROUP = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2708,
-  serialized_end=2983,
+  serialized_start=2711,
+  serialized_end=2986,
 )
 
 _REQUEST = descriptor.Descriptor(
@@ -1256,9 +1276,10 @@ _REQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2617,
-  serialized_end=2983,
+  serialized_start=2620,
+  serialized_end=2986,
 )
+
 
 _RESPONSECONTEXT = descriptor.Descriptor(
   name='ResponseContext',
@@ -1305,9 +1326,10 @@ _RESPONSECONTEXT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2986,
-  serialized_end=3208,
+  serialized_start=2989,
+  serialized_end=3211,
 )
+
 
 _RESPONSE_RESPONSEGROUP = descriptor.Descriptor(
   name='ResponseGroup',
@@ -1374,8 +1396,8 @@ _RESPONSE_RESPONSEGROUP = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=3272,
-  serialized_end=3595,
+  serialized_start=3275,
+  serialized_end=3598,
 )
 
 _RESPONSE = descriptor.Descriptor(
@@ -1401,8 +1423,8 @@ _RESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=3211,
-  serialized_end=3595,
+  serialized_start=3214,
+  serialized_end=3598,
 )
 
 _APPSREQUEST.fields_by_name['appType'].enum_type = _APPTYPE
@@ -1466,139 +1488,139 @@ DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE
 class AppsRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _APPSREQUEST
-
+  
   # @@protoc_insertion_point(class_scope:AppsRequest)
 
 class AppsResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _APPSRESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:AppsResponse)
 
 class Category(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CATEGORY
-
+  
   # @@protoc_insertion_point(class_scope:Category)
 
 class CommentsRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _COMMENTSREQUEST
-
+  
   # @@protoc_insertion_point(class_scope:CommentsRequest)
 
 class CommentsResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _COMMENTSRESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:CommentsResponse)
 
 class App(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-
+  
   class ExtendedInfo(message.Message):
     __metaclass__ = reflection.GeneratedProtocolMessageType
     DESCRIPTOR = _APP_EXTENDEDINFO
-
+    
     # @@protoc_insertion_point(class_scope:App.ExtendedInfo)
   DESCRIPTOR = _APP
-
+  
   # @@protoc_insertion_point(class_scope:App)
 
 class Comment(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _COMMENT
-
+  
   # @@protoc_insertion_point(class_scope:Comment)
 
 class CategoriesRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CATEGORIESREQUEST
-
+  
   # @@protoc_insertion_point(class_scope:CategoriesRequest)
 
 class CategoriesResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CATEGORIESRESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:CategoriesResponse)
 
 class SubCategoriesRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _SUBCATEGORIESREQUEST
-
+  
   # @@protoc_insertion_point(class_scope:SubCategoriesRequest)
 
 class SubCategoriesResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _SUBCATEGORIESRESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:SubCategoriesResponse)
 
 class RequestContext(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _REQUESTCONTEXT
-
+  
   # @@protoc_insertion_point(class_scope:RequestContext)
 
 class GetImageRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _GETIMAGEREQUEST
-
+  
   # @@protoc_insertion_point(class_scope:GetImageRequest)
 
 class GetAssetRequest(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _GETASSETREQUEST
-
+  
   # @@protoc_insertion_point(class_scope:GetAssetRequest)
 
 class GetImageResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _GETIMAGERESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:GetImageResponse)
 
 class GetAssetResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-
+  
   class InstallAsset(message.Message):
     __metaclass__ = reflection.GeneratedProtocolMessageType
     DESCRIPTOR = _GETASSETRESPONSE_INSTALLASSET
-
+    
     # @@protoc_insertion_point(class_scope:GetAssetResponse.InstallAsset)
   DESCRIPTOR = _GETASSETRESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:GetAssetResponse)
 
 class Request(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-
+  
   class RequestGroup(message.Message):
     __metaclass__ = reflection.GeneratedProtocolMessageType
     DESCRIPTOR = _REQUEST_REQUESTGROUP
-
+    
     # @@protoc_insertion_point(class_scope:Request.RequestGroup)
   DESCRIPTOR = _REQUEST
-
+  
   # @@protoc_insertion_point(class_scope:Request)
 
 class ResponseContext(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _RESPONSECONTEXT
-
+  
   # @@protoc_insertion_point(class_scope:ResponseContext)
 
 class Response(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-
+  
   class ResponseGroup(message.Message):
     __metaclass__ = reflection.GeneratedProtocolMessageType
     DESCRIPTOR = _RESPONSE_RESPONSEGROUP
-
+    
     # @@protoc_insertion_point(class_scope:Response.ResponseGroup)
   DESCRIPTOR = _RESPONSE
-
+  
   # @@protoc_insertion_point(class_scope:Response)
 
 # @@protoc_insertion_point(module_scope)

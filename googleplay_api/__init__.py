@@ -8,7 +8,7 @@ import urllib2
 from google.protobuf import descriptor
 from google.protobuf.internal.containers import RepeatedCompositeFieldContainer
 
-import market_proto
+from . import playstore_proto
 
 class LoginError(Exception):
     def __init__(self, value):
@@ -22,7 +22,7 @@ class RequestError(Exception):
     def __str__(self):
         return repr(self.value)
 
-class MarketSession(object):
+class PlayStoreSession(object):
     SERVICE = "android";
     URL_LOGIN = "https://www.google.com/accounts/ClientLogin"
     ACCOUNT_TYPE_GOOGLE = "GOOGLE"
@@ -33,7 +33,7 @@ class MarketSession(object):
     context = None
 
     def __init__(self):
-        self.context = market_proto.RequestContext()
+        self.context = playstore_proto.RequestContext()
         self.context.isSecure = 0
         self.context.version = 1002012
         self.context.androidId = "0123456789123456" # change me :(
@@ -142,19 +142,19 @@ class MarketSession(object):
             data = StringIO.StringIO(data)
             gzipper = gzip.GzipFile(fileobj=data)
             data = gzipper.read()
-            response = market_proto.Response()
+            response = playstore_proto.Response()
             response.ParseFromString(data)
             return response
         except Exception, e:
             raise RequestError(e)
 
     def searchApp(self, query, startIndex = 0, entriesCount = 10, extendedInfo = True):
-        appsreq = market_proto.AppsRequest()
+        appsreq = playstore_proto.AppsRequest()
         appsreq.query = query
         appsreq.startIndex = startIndex
         appsreq.entriesCount = entriesCount
         appsreq.withExtendedInfo = extendedInfo
-        request = market_proto.Request()
+        request = playstore_proto.Request()
         request.requestgroup.add(appsRequest = appsreq)
         response = self.execute(request)
         retlist = []
@@ -165,11 +165,11 @@ class MarketSession(object):
         return retlist
 
     def getComments(self, appid, startIndex = 0, entriesCount = 10):
-        req = market_proto.CommentsRequest()
+        req = playstore_proto.CommentsRequest()
         req.appId = appid
         req.startIndex = startIndex
         req.entriesCount = entriesCount
-        request = market_proto.Request()
+        request = playstore_proto.Request()
         request.requestgroup.add(commentsRequest = req)
         response = self.execute(request)
         retlist = []
@@ -179,12 +179,12 @@ class MarketSession(object):
                     retlist.append(self._toDict(comment))
         return retlist
 
-    def getImage(self, appid, imageid = "0", imagetype = market_proto.GetImageRequest.SCREENSHOT):
-        req = market_proto.GetImageRequest()
+    def getImage(self, appid, imageid = "0", imagetype = playstore_proto.GetImageRequest.SCREENSHOT):
+        req = playstore_proto.GetImageRequest()
         req.appId = appid
         req.imageId = imageid
         req.imageUsage = imagetype
-        request = market_proto.Request()
+        request = playstore_proto.Request()
         request.requestgroup.add(imageRequest = req)
         response = self.execute(request)
         for rg in response.responsegroup:
@@ -192,8 +192,8 @@ class MarketSession(object):
                 return rg.imageResponse.imageData
 
     def getCategories(self):
-        req = market_proto.CategoriesRequest()
-        request = market_proto.Request()
+        req = playstore_proto.CategoriesRequest()
+        request = playstore_proto.Request()
         request.requestgroup.add(categoriesRequest = req)
         response = self.execute(request)
         retlist = []
@@ -204,9 +204,9 @@ class MarketSession(object):
         return retlist
 
     def getSubCategories(self, apptype):
-        req = market_proto.SubCategoriesRequest()
+        req = playstore_proto.SubCategoriesRequest()
         req.appType = apptype
-        request = market_proto.Request()
+        request = playstore_proto.Request()
         request.requestgroup.add(subCategoriesRequest = req)
         response = self.execute(request)
         retlist = []
