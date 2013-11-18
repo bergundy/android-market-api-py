@@ -1,12 +1,16 @@
 from pprint import pprint
+from googleplay_api import PlayStoreSession, playstore_proto
+from sys import exit
 
-import market_proto
-from androidmarket import MarketSession
+import getpass
+
 
 if __name__ == "__main__":
     # Start a new session and login
-    session = MarketSession()
-    session.login("user@gmail.com", "password")
+    email = raw_input("Email: ")
+    passwd = getpass.getpass()
+    session = PlayStoreSession()
+    session.login(email, passwd)
 
     # Search for "bankdroid" on the market and print the first result
     results = session.searchApp("bankdroid")
@@ -23,15 +27,13 @@ if __name__ == "__main__":
 
     # Download and save the first screenshot
     data = session.getImage(app["id"])
-    f = open("screenshot.png", "wb")
-    f.write(data)
-    f.close()
+    with open("screenshot.png", "wb") as f:
+        f.write(data)
 
     # Download and save the app icon
-    data = session.getImage(app["id"], imagetype=market_proto.GetImageRequest.ICON)
-    f = open("icon.png", "wb")
-    f.write(data)
-    f.close()
+    data = session.getImage(app["id"], imagetype=playstore_proto.GetImageRequest.ICON)
+    with open("icon.png", "wb") as f:
+        f.write(data)
 
     # Get all the categories and subcategories
     results = session.getCategories()

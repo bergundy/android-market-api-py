@@ -96,7 +96,7 @@ Prints:
     ]
 
 
-Check out [examples.py](blob/master/examples.py) for working examples.
+Check out [examples.py](examples.py) for working examples.
 
 ## License
 
